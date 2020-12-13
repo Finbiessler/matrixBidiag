@@ -38,6 +38,13 @@ def houseBidiag(A):
     assert m >= n
     P, Wt = np.eye(m), np.eye(n)
 
+    print(f"-------------------------------------------- Initial Step --------------------------------------------")
+    print("P:\n", P)
+    print("C:\n", A)
+    print("Wt:\n", Wt)
+    print("\n")
+
+
     for col in range(n):
         v, beta = computeHouseVec(A[col:, col])
         A[col:, col:] = (np.eye(m - col) - beta * np.outer(v, v)).dot(A[col:, col:])
@@ -53,11 +60,12 @@ def houseBidiag(A):
             Wt = Pt.dot(Wt)
 
         step = col+1
-        #print(f"-------------------------------------------- Step No.{step} --------------------------------------------")
-        #print("P:\n", P)
-        #print("C:\n", A)
-        #print("Wt:\n", Wt)
-        #print("\n")
+        input("")
+        print(f"-------------------------------------------- Step No.{step} --------------------------------------------")
+        print("P:\n", P)
+        print("C:\n", A)
+        print("Wt:\n", Wt)
+        print("\n")
     return P, A, Wt
 
 def getBidiagElems(C):

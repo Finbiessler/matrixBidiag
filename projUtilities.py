@@ -11,7 +11,7 @@ def printCalcResults(P, C, Wt, origMatirx):
     print("C:\n", C)
     print("Wt:\n", Wt)
     print("\n")
-    print("A == P*C*Wt:", np.allclose(P.dot(C).dot(Wt), origMatirx))
+    print("A == P*C*Wt:", np.allclose(P@C@Wt, origMatirx))
     print("\n")
 
 def initRandomMatrix(rows , cols):
