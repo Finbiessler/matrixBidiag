@@ -1,0 +1,27 @@
+def houseHolder(x):
+    n = len(x)
+    kap = np.linalg.norm(x)
+    v = np.zeros(n)
+    v[0] = x[0] + np.sign(x[0])*kap
+    for i in range(1, n):
+        v[i] = x[i]
+    return (1/np.linalg.norm(v))*v
+
+def applyHouseholder(u, X):
+    return X - 2*u*(np.dot(np.transpose(u), X))
+
+
+    print("-------------------------------------------- LGK-Bidiagonalization ----------------------------------------------------")
+    Z = np.eye(cols)
+    P = np.eye(rows)
+
+    alphas, betas, P, Z = lgk.lgkBidiag(A, P, Z, b, cols)
+
+    print("Alphas:\n", alphas)
+    print("Betas:\n", betas)
+    print("P:\n", P)
+    print("Z:\n", Z)
+
+    #print(np.linalg.norm(alphaz1))
+    #normed_alphaZi = (1/np.linalg.norm(alphaz1))*alphaz1
+    #print(normed_alphaZi*np.linalg.norm(alphaz1))
