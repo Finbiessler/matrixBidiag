@@ -1,6 +1,5 @@
 import householderBidiag as hb
 import projUtilities as util
-import lgkBidiag as lgk
 import numpy as np
 
 if __name__ == '__main__':
