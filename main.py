@@ -13,7 +13,7 @@ if __name__ == '__main__':
     util.printInputMatrix(C)
 
     # Calculate householder bidiagonalization of initial matirx A
-    P, C, W = hb.houseBidiag(C)
+    P, C, Wt = hb.houseBidiag(C)
 
     # Display the calculation results
-    util.printCalcResults(P, C, W, C_test)
+    util.printCalcResults(P, C, Wt, C_test)

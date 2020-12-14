@@ -8,10 +8,10 @@ def printInputMatrix(C):
 def printCalcResults(P, C, Wt, origMatirx):
     #print("-------------------------------------------- Final Result --------------------------------------------")
     print("P:\n", P)
-    print("C:\n", C)
+    print("B:\n", C)
     print("Wt:\n", Wt)
     print("\n")
-    print("A == P*C*Wt:", np.allclose(P@C@Wt, origMatirx))
+    print("C == P*B*Wt:", np.allclose(P@C@Wt, origMatirx))
     print("\n")
 
 def initRandomMatrix(rows , cols):
